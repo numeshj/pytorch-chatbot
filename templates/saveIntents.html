@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Intents</title>
+</head>
+<body>
+    <h1>Add Intents</h1>
+    <form id="addIntentForm">
+        <label for="tag">Tag:</label><br>
+        <input type="text" id="tag" name="tag" required><br><br>
+        
+        <label for="pattern">Pattern:</label><br>
+        <input type="text" id="pattern" name="pattern" required><br><br>
+        
+        <label for="response">Response:</label><br>
+        <input type="text" id="response" name="response" required><br><br>
+        
+        <input type="submit" value="Add Intent">
+    </form>
+
+    <script>
+        document.getElementById("addIntentForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const tag = document.getElementById("tag").value;
+            const pattern = document.getElementById("pattern").value;
+            const response = document.getElementById("response").value;
+
+            const intent = {
+                tag: tag,
+                patterns: [pattern],
+                responses: [response]
+            };
+
+            // Send the intent to be saved
+            saveIntent(intent);
+        });
+
+        function saveIntent(intent) {
+            // Fetch existing intents from intents.json
+            fetch('intents.json')
+            .then(response => response.json())
+            .then(data => {
+                // Append the new intent to the existing intents
+                data.push(intent);
+
+                // Send the updated intents array to be saved
+                saveIntentsToFile(data);
+            })
+            .catch(error => console.error('Error fetching intents:', error));
+        }
+
+        function saveIntentsToFile(intents) {
+            // Convert intents array to JSON string
+            const jsonIntents = JSON.stringify(intents);
+
+            // Send a POST request to save the JSON to intents.json
+            fetch('saveIntents.html', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: jsonIntents
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert("Intent added successfully!");
+                } else {
+                    alert("Failed to add intent!");
+                }
+            })
+            .catch(error => console.error('Error saving intents:', error));
+        }
+    </script>
+</body>
+</html>

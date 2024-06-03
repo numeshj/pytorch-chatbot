@@ -1,0 +1,73 @@
+{
+  "intents": [
+    {
+      "tag": "introduction",
+      "patterns": ["Tell me about the hotel", "What is this place?", "Can you introduce yourself?", "Hotel information"],
+      "responses": [
+        "Welcome to Clarida! We are located at No 123, Galle Fort, Galle. For any inquiries, you can contact us at 0912212345 or email us at info@clarida.com. How can I assist you today?",
+        "Clarida is situated at No 123, Galle Fort, Galle. Feel free to call us at 0912212345 or email info@clarida.com. How may I help you?",
+        "You have reached Clarida, located at No 123, Galle Fort, Galle. Our contact number is 0912212345 and our email is info@clarida.com. What can I do for you today?"
+      ]
+    },
+    {
+      "tag": "greeting",
+      "patterns": ["Hello", "Hi", "Hey", "Good morning", "Good evening", "Greetings"],
+      "responses": ["Hello! How can I assist you today?", "Hi there! How can I help you?", "Good day! How can I be of service?"]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Goodbye", "See you later", "Bye", "Take care"],
+      "responses": ["Goodbye! Have a great day!", "See you later! If you need anything, let us know.", "Bye! Have a wonderful stay!"]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thank you", "Thanks", "I appreciate it", "Thank you so much"],
+      "responses": ["You're welcome!", "Happy to help!", "My pleasure!", "Anytime!"]
+    },
+    {
+      "tag": "check_in",
+      "patterns": ["I want to check in", "Can I check in?", "Checking in", "I have a reservation"],
+      "responses": ["Sure, can I have your reservation details, please?", "May I have your booking confirmation number?", "Please provide your reservation details."]
+    },
+    {
+      "tag": "check_out",
+      "patterns": ["I want to check out", "Can I check out?", "Checking out"],
+      "responses": ["Certainly, may I have your room number?", "I'll assist you with the check-out process. Can I have your room number?", "Please provide your room number for check-out."]
+    },
+    {
+      "tag": "room_service",
+      "patterns": ["I'd like to order room service", "Room service, please", "Can I get some food?", "I'd like to order some food"],
+      "responses": ["Sure, here is our room service menu. What would you like to order?", "What can I get for you today?", "Please let us know your order from the room service menu."]
+    },
+    {
+      "tag": "amenities",
+      "patterns": ["What amenities do you have?", "Tell me about the hotel amenities", "What facilities are available?"],
+      "responses": ["We offer a swimming pool, gym, spa, and free Wi-Fi. How can I assist you further?", "Our amenities include a gym, spa, swimming pool, and complimentary breakfast.", "We have a variety of amenities including a fitness center, spa, and more."]
+    },
+    {
+      "tag": "restaurant",
+      "patterns": ["Are there any restaurants nearby?", "Do you have a restaurant?", "Can you recommend a restaurant?", "Where can I eat?"],
+      "responses": ["Our hotel has a wonderful restaurant on the ground floor. Additionally, there are several excellent dining options nearby. Would you like some recommendations?", "Yes, we have an in-house restaurant, and there are several dining options within walking distance.", "You can dine at our hotel restaurant or try nearby eateries. Would you like more details?"]
+    },
+    {
+      "tag": "booking",
+      "patterns": ["I want to make a reservation", "Can I book a room?", "I'd like to reserve a room"],
+      "responses": ["Sure, I can help with that. May I know the dates of your stay?", "Please provide the details of your stay for the reservation.", "I'd be happy to assist with your booking. When would you like to stay with us?"]
+    },
+    {
+      "tag": "location",
+      "patterns": ["Where is the hotel located?", "How do I get to the hotel?", "What is the location of the hotel?", "What is the hotel address?"],
+      "responses": ["We are located at No 123, Galle Fort, Galle. Would you like directions?", "The hotel is at No 123, Galle Fort, Galle. How can I assist you with directions?", "Our address is No 123, Galle Fort, Galle. Let us know if you need any assistance getting here."]
+    },
+    {
+      "tag": "transportation",
+      "patterns": ["Do you offer airport shuttle service?", "Is there a taxi service?", "Do you provide transport serive?", "How can I get to the airport?"],
+      "responses": ["Yes, we offer an airport shuttle service. Would you like to book it?", "We can arrange a taxi service for you. Shall I book one?", "We provide airport shuttle service and can also arrange a taxi. How would you prefer to travel?"]
+    },
+    {
+      "tag": "local_attractions",
+      "patterns": ["What are the local attractions?", "Can you recommend some places to visit?", "What can I do around here?"],
+      "responses": ["We are close to several attractions like the Galle Fort, the Maritime Museum, and the beautiful beaches of Galle. Would you like more information?", "There are many attractions nearby including the Galle Lighthouse, the National Museum, and various boutique shops. How can I assist you further?", "You can visit the nearby historical sites, beaches, and local markets. Need more details?"]
+    }
+  ]
+}
